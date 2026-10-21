@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Pinch Gesture Tutorial Keyframes */
+@keyframes pinchThumbAnim {
+  0%, 15%, 85%, 100% {
+    transform: translate(0px, 0px);
+  }
+  45%, 60% {
+    transform: translate(28px, -22px);
+  }
+}
+
+@keyframes pinchIndexAnim {
+  0%, 15%, 85%, 100% {
+    transform: translate(0px, 0px);
+  }
+  45%, 60% {
+    transform: translate(-28px, 22px);
+  }
+}
+
+@keyframes pinchContactBurst {
+  0%, 42% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  46% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  65%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes pinchBadgePulse {
+  0%, 40% {
+    opacity: 0;
+    transform: translateY(4px) scale(0.9);
+  }
+  46%, 62% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  70%, 100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.9);
+  }
+}
+
+@keyframes pinchDistanceNumber {
+  0%, 15%, 85%, 100% {
+    content: "125 px";
+    color: #38bdf8;
+  }
+  30%, 75% {
+    content: "75 px";
+    color: #a855f7;
+  }
+  45%, 60% {
+    content: "24 px";
+    color: #ec4899;
+  }
+}
+
+.animate-pinch-thumb {
+  animation: pinchThumbAnim 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-pinch-index {
+  animation: pinchIndexAnim 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-pinch-burst {
+  animation: pinchContactBurst 3s cubic-bezier(0.1, 0.9, 0.2, 1) infinite;
+}
+
+.animate-pinch-badge {
+  animation: pinchBadgePulse 3s ease-in-out infinite;
+}
